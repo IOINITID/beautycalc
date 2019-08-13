@@ -28,6 +28,9 @@ body {
   border: 1px solid #ffffff;
   background: rgba(255, 255, 255, 0.75);
   outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .calculator-grid>button:hover {
@@ -58,4 +61,15 @@ body {
 .current-operand {
   color: #ffffff;
   font-size: 2.5rem;
+}
+
+@media (min-width: 1px) and (max-width: 576px) {
+  .calculator-grid {
+    grid-template-columns: repeat(4, 70px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 70px);
+  }
+
+  .calculator-grid>button {
+    font-size: 1.25rem;
+  }
 }

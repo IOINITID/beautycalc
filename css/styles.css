@@ -35,6 +35,15 @@ body {
   border: 1px solid #ffffff;
   background: rgba(255, 255, 255, 0.75);
   outline: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .calculator-grid > button:hover {
@@ -73,5 +82,17 @@ body {
 .current-operand {
   color: #ffffff;
   font-size: 2.5rem;
+}
+
+@media (min-width: 1px) and (max-width: 576px) {
+  .calculator-grid {
+    -ms-grid-columns: (70px)[4];
+        grid-template-columns: repeat(4, 70px);
+    -ms-grid-rows: minmax(120px, auto) (70px)[5];
+        grid-template-rows: minmax(120px, auto) repeat(5, 70px);
+  }
+  .calculator-grid > button {
+    font-size: 1.25rem;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
